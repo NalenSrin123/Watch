@@ -1,0 +1,310 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index:111 ;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    /* background-color: black; */
+}
+.header{
+    
+    width: 80%;
+    height: 100%;
+    /* background-color: aqua; */
+    margin: auto;
+    display: flex;
+}
+.header .logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.header .logo img{
+    width: 200px;
+}
+.header .menu{
+    width: 60%;
+    height: 100%;
+}
+.header .menu ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+.header .menu ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0.6;
+    position: relative;
+}
+.header .menu ul li:hover a{
+    opacity: 1;
+}
+.header .menu ul li a::before{
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    background-color: rgb(209, 203, 203);
+}
+.header .menu ul li:hover a::before{
+    width: 100%;
+    transition: 0.5s;
+}
+.header .menu ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    background-color: rgb(209, 203, 203);
+}
+.header .menu ul li:hover a::after{
+    width: 100%;
+    transition: 0.5s;
+}
+.header .contact{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+.header .contact button{
+    padding: 13px 25px;
+    border: none;
+    background-color: #0c0c0c;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.header .contact button:hover{
+    background-color: rgb(0, 0, 255);
+}
+.header .contact i{
+    border: 1px solid gray;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.drop{
+    position: relative;
+    display: none;
+    animation-name: drop;
+    animation-duration: 0.7s;
+}
+.drop-down:hover .drop{
+    display: block;
+    
+}
+.drop .drop-col{
+    padding: 20px 30px;
+    width: 80vw;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #0c0c0c;
+    left: -470px;
+    top: 50px;
+    border-radius: 10px;
+}
+.drop .drop-col .card{
+    width: 100%;
+    height: 270px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid gray;
+    border-radius: 10px;
+    position: relative;
+}
+.drop .drop-col .card .image{
+    width: 100%;
+    height: 70%;
+}
+.drop .drop-col .card .image img{
+    width: 200px;
+    height: 100%;
+}
+.drop .drop-col .card .title{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.drop .drop-col .card .title p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.drop .drop-col .card button{
+    padding: 10px 15px;
+    border: none;
+    position: absolute;
+    bottom:-15px;
+    left: 60px;
+    background-color:rgb(57, 57, 242) ;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+section{
+    width: 100%;
+    margin-top: 30px;
+    background-color: #fff;
+}
+.slide-show{
+    width: 80%;
+    height: 90vh;
+    /* background-color: red; */
+    margin: auto;
+    display: flex;
+    padding: 10px;
+}
+.slide-show .title{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+    /* background-color: blue; */
+}
+.slide-show .title p:nth-child(1){
+    font-size: 25px;
+    opacity: 0.6;
+}
+.slide-show .title p:nth-child(2){
+    font-size: 50px;
+}
+.slide-show .title h1{
+    font-size: 60px;
+}
+.slide-show .title .button{
+    display: flex;
+    gap: 20px;
+}
+.slide-show .title .button button{
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    background-color: rgb(57, 57, 242);
+    color: #fff;
+    font-weight: bold;
+}
+.slide-show .title .button button:nth-child(1):hover{
+    background-color: #0c0c0c;
+    transition: 0.3s;
+}
+.slide-show .title .button button:nth-child(2){
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+}
+.slide-show .title .button button:nth-child(2):hover{
+    background-color: rgb(57, 57, 242);
+    color: #fff;
+    border: 1px solid rgb(57, 57, 242);
+    transition: 0.3s;
+}
+.slide-show .slide{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.slide-show .slide img{
+    width: 600px;
+}
+.about-watch{
+    width: 80%;
+    margin: auto;
+    /* background-color: blue; */
+    display: flex;
+}
+.about-watch .left-title{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 40px;
+}
+.about-watch .left-title .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;   
+    padding: 10px 20px;
+}
+
+.about-watch .left-title .title img{
+    width: 40px;
+    margin-bottom: 10px;
+}
+.about-watch .left-title .title img:hover{
+   transform: rotateY(360deg);
+   transition: .7s;
+}
+.about-watch .left-title .title p,h3{
+    font-size: 20px;
+}
+.about-watch .left-title:nth-child(3) .title{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: start;
+}
+.about-watch .watch{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    /* padding: 10px; */
+}
+.about-watch .watch img{
+    width: 100%;
+}
+@keyframes drop{
+    0%{
+        transform: scaleY(0);
+       
+    }
+    100%{
+        transform: scaleY(1);
+        /* transition: 0.5s */
+    }
+}
+
+
+
